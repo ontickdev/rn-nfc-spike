@@ -60,6 +60,13 @@ functions:
           path: /apple-app-site-association
           method: get
           cors: true
+  nfcTest:
+    handler: src/functions/nfcTest.handler
+    events:
+      - http:
+          path: /nfc-test/{code}
+          method: get
+          cors: true
 
 resources:
   Resources:
