@@ -53,6 +53,13 @@ functions:
           path: /.well-known/assetlinks.json
           method: get
           cors: true
+  iosUniversalLinks:
+    handler: src/functions/iosUniversalLinks.handler
+    events:
+      - http:
+          path: /apple-app-site-association
+          method: get
+          cors: true
 
 resources:
   Resources:
