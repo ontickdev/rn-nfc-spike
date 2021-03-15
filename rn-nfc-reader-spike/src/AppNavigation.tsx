@@ -28,9 +28,9 @@ const AppNavigation: React.FC<AppNavigationProps> = ({ initialRouteName }) => {
         options={{ title: 'foooooooooo!' }}
         component={Foo}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="Foo2"
-        options={{ title: 'foo twoooooooo' }}
+        options={{ title: 'NFC Test!!!' }}
         component={Foo}
       />
     </Stack.Navigator>

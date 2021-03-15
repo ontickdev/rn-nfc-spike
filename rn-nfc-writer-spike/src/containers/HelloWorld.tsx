@@ -19,11 +19,21 @@ const HelloWorld: React.FC = () => {
     Alert.alert(result ? 'Success' : 'Fail to write NDEF');
   };
 
+  const writeUrl = async () => {
+    let result = await NfcProxy.writeNdef({
+      type: 'URI',
+      //value: 'ontick://auth/sign-in/123',
+      value: 'http://bribepay.co.uk/nfc-test/123',
+    });
+    Alert.alert(result ? 'Success' : 'Fail to write NDEF');
+  };
+
   return (
     <>
       <Text style={styles.header}>Welcome to Ontick :o)</Text>
-      <Button title="write mime" onPress={writeMime} />
-      <Button title="write text" onPress={writeText} />
+      {/* <Button title="write mime" onPress={writeMime} />
+      <Button title="write text" onPress={writeText} /> */}
+       <Button title="write url" onPress={writeUrl} /> 
     </>
   );
 };

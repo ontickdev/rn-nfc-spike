@@ -21,17 +21,20 @@
           <action android:name="android.intent.action.MAIN" />
           <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        <intent-filter>
-          <action android:name="android.intent.action.VIEW"/>
-          <!-- <category android:name="android.intent.category.DEFAULT"/> -->
-          <category android:name="android.intent.category.BROWSABLE"/>
-          <data android:scheme="ontick"/>
 
+        <intent-filter android:autoVerify="true">
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+
+          <action android:name="android.intent.action.VIEW" />
           <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-          <category android:name="android.intent.category.DEFAULT"/>
-          <!-- <data android:mimeType="application/rn-nfc-spike" /> -->
-           <!-- <data android:mimeType="rn-nfc-spike/code" /> -->
+
+          <data android:scheme="https"
+                android:host="bribepay.co.uk"
+                android:pathPrefix="/nfc-test"
+          />       
         </intent-filter>
+
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>

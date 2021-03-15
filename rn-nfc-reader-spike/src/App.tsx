@@ -25,12 +25,22 @@ const CustomDefaultTheme = {
   },
 };
 
+// const linking = {
+//   prefixes: ['ontick://', 'https://bribepay.co.uk'],
+//   config: {
+//     screens: {
+//       Foo: 'auth/sign-in/:code',
+//       Foo2: 'nfc-test'
+//     },
+//   },
+// };
+
 const linking = {
-  prefixes: ['ontick://', 'https://this-is-my-test-123456.com'],
+  prefixes: ['https://bribepay.co.uk'],
   config: {
     screens: {
-      Foo: 'auth/sign-in/:code',
-      Foo: ''
+      //Foo: 'auth/sign-in/:code',
+      Foo2: 'nfc-test/:code'
     },
   },
 };
