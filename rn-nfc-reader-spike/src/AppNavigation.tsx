@@ -6,6 +6,7 @@ import HelloWorld from './containers/HelloWorld';
 export type StackParamList = {
   HelloWorld: undefined;
   Foo: { code: string | undefined };
+  Foo2: { code: string | undefined };
 };
 
 const Stack = createStackNavigator<StackParamList>();
@@ -25,6 +26,11 @@ const AppNavigation: React.FC<AppNavigationProps> = ({ initialRouteName }) => {
       <Stack.Screen
         name="Foo"
         options={{ title: 'foooooooooo!' }}
+        component={Foo}
+      />
+            <Stack.Screen
+        name="Foo2"
+        options={{ title: 'foo twoooooooo' }}
         component={Foo}
       />
     </Stack.Navigator>

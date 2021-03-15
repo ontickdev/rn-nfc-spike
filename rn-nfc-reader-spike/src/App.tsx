@@ -26,10 +26,11 @@ const CustomDefaultTheme = {
 };
 
 const linking = {
-  prefixes: ['ontick://'],
+  prefixes: ['ontick://', 'https://this-is-my-test-123456.com'],
   config: {
     screens: {
       Foo: 'auth/sign-in/:code',
+      Foo: ''
     },
   },
 };
