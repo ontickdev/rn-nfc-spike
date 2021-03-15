@@ -24,7 +24,7 @@ export const handler: APIGatewayProxyHandler = async (
         apps: [],
         details: [
             {
-                appID: "T5TQ36Q2SQ.com.reddit.production",
+                appID: "V42C94UF8R.org.reactjs.native.example.RnNfcReaderSpike",
                 paths: ["*"],
             }
         ]
